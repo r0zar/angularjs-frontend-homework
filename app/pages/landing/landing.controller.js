@@ -14,6 +14,5 @@ function LandingController(HotelService) {
         .then(function(response) {
           vm.hotels = response.results.hotels;
         })
-        .catch(angular.noop());
     }
 }

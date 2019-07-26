@@ -1,0 +1,17 @@
+<div class="filters">
+    <div class="filter-type">
+        <span>Hotel name</span>
+        <input type="text" maxlength="20" ng-model="$ctrl.name">
+    </div>
+    <div class="filter-type">
+        <span>Price</span>
+        <select ng-model="$ctrl.sort">
+        <option value="-hotelStaticContent.rating">Recommended</option>
+        <option value="lowestAveragePrice.amount">Price low-to-high</option>
+        <option value="-lowestAveragePrice.amount">Price high-to-low</option>
+        </select>
+    </div>
+    <div class="filter-type">
+        <div class="btn reset" ng-click="$ctrl.sort = ''; $ctrl.name = ''">Reset</div>
+    </div>
+</div>

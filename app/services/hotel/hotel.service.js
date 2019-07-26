@@ -1,14 +1,13 @@
-import angular from 'angular';
-
 function HotelService($http) {
     'ngInject';
 
     this.get = function() {
-        return $http.get('https://homework-app.rocketmiles.com/fe-homework/rates ')
+        let url = 'https://homework-app.rocketmiles.com/fe-homework/rates'
+        return $http.get(url)
             .then(function(response) {
                 return response.data;
             })
-            .catch(angular.noop())
+            .catch(() => $http.get(url).then(response => response.data))
     }
 }
 

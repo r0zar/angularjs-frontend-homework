@@ -1,0 +1,24 @@
+<div class="hotel-list">
+    <img class="photo" ng-src="{{ $ctrl.hotel.hotelStaticContent.mainImage.url }}" onError="this.onerror=null;this.src='https://icon-library.net/images/bedroom-icon/bedroom-icon-1.jpg';"/>
+    <div class="details">
+        <div>
+            {{ $ctrl.hotel.hotelStaticContent.name }}
+        </div>
+        <div class="sub-text">
+            {{ $ctrl.hotel.hotelStaticContent.neighborhoodName }}
+        </div>
+    </div>
+    <div class="price">
+        <div class="rewards">
+            {{ $ctrl.hotel.rewards.miles | number }}
+            <span class="sub-text">miles</span>
+        </div>
+        <div class="cost">
+            {{ $ctrl.hotel.lowestAveragePrice.amount | currency:undefined:0 }}
+            <div class="sub-text">per night</div>
+        </div>
+        <div class="btn">Select</div>
+    </div>
+</div>
+
+

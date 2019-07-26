@@ -54,7 +54,8 @@ module.exports = function(config) {
         preprocessors: {
             'app/app.js': ['webpack'],
             'app/app.module.js': ['webpack'],
-            'app/**/*.spec.js': ['webpack']
+            'app/**/*.spec.js': ['webpack'],
+            'app/**/**/*.spec.js': ['webpack']
         },
 
         webpackMiddleware: {

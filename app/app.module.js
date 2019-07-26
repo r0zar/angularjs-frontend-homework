@@ -2,7 +2,8 @@ import angular from 'angular';
 
 angular.module('app', [
     'ui.router',
-    'landing'
+    'landing',
+    'components'
 ])
 .config(configure);
 
